@@ -1,0 +1,68 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: -15px;
+  height: 60px;
+}
+
+.navbar__button {
+  color: white !important;
+  padding: 10px !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.navbar__button .navbar__icon {
+  animation-name: settings;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes settings {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar__settingDialog {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 600px;
+  height: 300px;
+  padding: 20px;
+  position: relative;
+}
+
+.navbar__settingDialog h1 {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 10px;
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+
+.navbar_settingDialog-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_settingDialog-textField {
+  margin: 10px !important;
+}
+
+.navbar_settingDialog-button {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  margin-right: 30px !important;
+  margin-bottom: 10px !important;
+  background-color: rgb(55 55 55) !important;
+  color: white !important;
+}

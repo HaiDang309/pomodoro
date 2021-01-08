@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from 'react'; 
+import NavbarClock from './components/NavbarClock/Navbar';
+import Navbar from './components/Navbar/Navbar'
+import WorkTime from './components/Clock/WorkTime';
+import BreakTime from "./components/Clock/BreakTime";
+import LongBreakTime from "./components/Clock/LongBreakTime";
+import Control from './components/Control/Control';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app" >
+        <div className="app__header">
+        <Navbar/>
+        </div>
+        <div className="app__content">
+          <NavbarClock />
+          <Switch>
+            <Route exact path="/" component={WorkTime} />
+            <Route path="/break" component={BreakTime} />
+            <Route path="/long-break" component={LongBreakTime} />
+          </Switch>
+          <Control />
+        </div>
+      </div>
+    </Router>
   );
 }
 

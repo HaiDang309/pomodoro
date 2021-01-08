@@ -1,0 +1,38 @@
+.control {
+  margin-top: -100px;
+}
+
+.control__buttonActive {
+  font-size: 30px !important;
+  margin-top: -20px !important;
+  border-radius: 5px !important;
+  padding: 10px;
+  background-color: white !important;
+  font-family: cursive !important;
+  width: 200px !important;
+  position: relative;
+}
+
+.control__buttonActive::before {
+  content: "";
+  width: 200px;
+  height: 20px;
+  background-color: rgb(231 193 191);
+  z-index: -1;
+  position: absolute;
+  bottom: -5px;
+  border-radius: 5px;
+}
+
+.control__buttonNotActive {
+  font-size: 30px !important;
+  margin-top: -20px !important;
+  border-radius: 0px !important;
+  padding: 10px;
+  background-color: white !important;
+  font-family: cursive !important;
+  width: 200px !important;
+  position: relative;
+  transform: translateY(5px);
+  border-radius: 5px !important;
+}

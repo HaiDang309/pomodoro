@@ -1,0 +1,27 @@
+.navbarClock {
+  margin-bottom: -120px;
+}
+
+.navbarClock__link {
+  text-decoration: none;
+}
+
+.navbarClock__button {
+  color: white !important;
+  font-size: 20px !important;
+  margin: 10px !important;
+  text-decoration: none;   
+  border-radius: 20px !important;
+}
+
+.navbarClock__button:hover {
+  transition: all 0.5s ease;
+  transform: translate(-5px, -5px);
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#active {
+    background-color: rgba(255,255,255,0.2) !important;
+}
+
+
